@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CValidatorUnitType id="IsZergling2">
+        <Value value="Zergling"/>
+    </CValidatorUnitType>
+    <CValidatorUnitType id="LesserLingBuffValidator">
+        <Value value="Zergling"/>
+    </CValidatorUnitType>
+    <CValidatorUnitType id="LordlingBuffValidator"/>
+</Catalog>

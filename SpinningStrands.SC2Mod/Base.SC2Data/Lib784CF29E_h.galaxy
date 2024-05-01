@@ -1,0 +1,13 @@
+include "TriggerLibs/natives"
+
+//--------------------------------------------------------------------------------------------------
+// Library: Strandsutils
+//--------------------------------------------------------------------------------------------------
+// Function Declarations
+void lib784CF29E_gf_ConsumeCritter (unit lp_cHOSEN_UNIT);
+
+// Trigger Declarations
+trigger lib784CF29E_gt_BiomassInitilization;
+trigger lib784CF29E_gt_CritterisKilled;
+trigger lib784CF29E_gt_DisableAchieves;
+

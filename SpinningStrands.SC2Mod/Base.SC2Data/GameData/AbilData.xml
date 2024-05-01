@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CAbilEffectInstant id="AcidMaw">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <Effect index="0" value="AcidMawsUpgradeEffect"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="AcidMawBTN">
+            <Flags index="UseDefaultButton" value="1"/>
+        </CmdButtonArray>
+        <Cost>
+            <Resource index="Custom" value="1"/>
+            <Display index="Custom" value="1"/>
+        </Cost>
+    </CAbilEffectInstant>
+    <CAbilEffectInstant id="BrainExpansion">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <Cost>
+            <Resource index="Custom" value="2"/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="BrainExpansionBTN"/>
+    </CAbilEffectInstant>
+    <CAbilEffectInstant id="BroodmotherSpawnBiomassdrones">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <Effect index="0" value="BroodmotherSpawnDrones"/>
+        <Cost>
+            <Resource index="Custom" value="2"/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="BroodmotherDrones"/>
+    </CAbilEffectInstant>
+    <CAbilEffectInstant id="BroodmotherSpawnHydralisk">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <Effect index="0" value="BroodmotherSpawnHydralisks"/>
+        <Cost>
+            <Charge CountMax="5" CountStart="5" CountUse="1"/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="SwarmQueenHydralisk"/>
+    </CAbilEffectInstant>
+    <CAbilEffectInstant id="BroodmotherSpawnZerglings">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <Cost>
+            <Charge CountMax="5" CountStart="5" CountUse="1"/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Zergling"/>
+    </CAbilEffectInstant>
+    <CAbilEffectTarget id="BruteTyranny">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <DefaultButtonCardId value="T"/>
+        <Effect index="0" value="BruteTyrannySet"/>
+        <Cost>
+            <Charge CountMax="11" CountStart="11" CountUse="1"/>
+        </Cost>
+        <TargetFilters value="-;Ally,Neutral,Enemy"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="BruteTyrannyBtn"/>
+    </CAbilEffectTarget>
+    <CAbilMorph id="BurrowALingDown">
+        <AbilSetId value="BrwD"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:MorphsandBurrows"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="BurrowDown">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <CmdButtonArray index="Cancel" DefaultButtonFace="Cancel"/>
+        <ActorKey value="BurrowDown"/>
+        <Flags index="Interruptible" value="1"/>
+        <Flags index="IgnoreFacing" value="1"/>
+        <Flags index="IgnorePlacement" value="0"/>
+        <Flags index="SuppressMovement" value="1"/>
+        <InfoArray Unit="Alphaling2"/>
+    </CAbilMorph>
+    <CAbilMorph id="BurrowLargeSwarmQueenDown2">
+        <AbilSetId value="BrwD"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:MorphsandBurrows"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="BurrowDown">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <CmdButtonArray index="Cancel" DefaultButtonFace="Cancel"/>
+        <ActorKey value="BurrowDown"/>
+        <Flags index="Interruptible" value="1"/>
+        <Flags index="IgnoreFacing" value="1"/>
+        <Flags index="IgnorePlacement" value="0"/>
+        <Flags index="SuppressMovement" value="1"/>
+        <InfoArray Unit="LargeSwarmQueenBurrowed2" RandomDelayMax="0.25">
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="0.8332"/>
+            </SectionArray>
+            <SectionArray index="Collide">
+                <DurationArray index="Duration" value="0.5556"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Duration" value="0.6665"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilMorph id="BurrowLargeSwarmQueenUp2">
+        <AbilSetId value="BrwU"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:MorphsandBurrows"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="BurrowUp">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <ActorKey value="BurrowUp"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="IgnoreFacing" value="1"/>
+        <InfoArray Unit="Broodmother" RandomDelayMax="0.5">
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="1"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Duration" value="0.4443"/>
+            </SectionArray>
+        </InfoArray>
+        <AutoCastFilters value="Visible;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden"/>
+        <AutoCastValidatorArray value="TargetNotChangeling"/>
+        <AutoCastRange value="5"/>
+        <AutoCastCountMin value="1"/>
+    </CAbilMorph>
+    <CAbilEffectTarget id="DarkArchonConfusion">
+        <Cost index="0">
+            <Vital index="Energy" value="100"/>
+        </Cost>
+    </CAbilEffectTarget>
+    <CAbilTrain id="MorphZerglingAlphaling">
+        <Name value="Abil/Name/MorphZerglingToBaneling2"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <RefundFraction>
+            <Resource index="Minerals" value="-0.75"/>
+            <Resource index="Vespene" value="-0.75"/>
+            <Resource index="Terrazine" value="-0.75"/>
+            <Resource index="Custom" value="-0.75"/>
+        </RefundFraction>
+        <Activity value="UI/Morphing"/>
+        <ActorKey value="BanelingAspect"/>
+        <Flags index="KillOnFinish" value="1"/>
+        <Flags index="Select" value="1"/>
+        <MorphUnit value="AlphalingCocoon"/>
+        <InfoArray index="Train1" Time="10" Alert="MorphComplete_Zerg">
+            <Charge Link="Abil/MorphZerglingToBaneling2"/>
+            <Cooldown Link="Abil/MorphZerglingToBaneling2"/>
+            <Button DefaultButtonFace="MorphtoAlphaBTN">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+            <Unit value="Alphaling"/>
+            <Flags index="IgnorePlacement" value="1"/>
+        </InfoArray>
+        <InfoArray index="Train2">
+            <Charge Link="Abil/MorphZerglingToBaneling2"/>
+            <Cooldown Link="Abil/MorphZerglingToBaneling2"/>
+        </InfoArray>
+        <InfoArray index="Train3">
+            <Charge Link="Abil/MorphZerglingToBaneling2"/>
+            <Cooldown Link="Abil/MorphZerglingToBaneling2"/>
+        </InfoArray>
+        <InfoArray index="Train4">
+            <Charge Link="Abil/MorphZerglingToBaneling2"/>
+            <Cooldown Link="Abil/MorphZerglingToBaneling2"/>
+        </InfoArray>
+        <InfoArray index="Train5">
+            <Charge Link="Abil/MorphZerglingToBaneling2"/>
+            <Cooldown Link="Abil/MorphZerglingToBaneling2"/>
+        </InfoArray>
+        <InfoArray index="Train6">
+            <Charge Link="Abil/MorphZerglingToBaneling2"/>
+            <Cooldown Link="Abil/MorphZerglingToBaneling2"/>
+        </InfoArray>
+        <InfoArray index="Train7">
+            <Charge Link="Abil/MorphZerglingToBaneling2"/>
+            <Cooldown Link="Abil/MorphZerglingToBaneling2"/>
+        </InfoArray>
+        <InfoArray index="Train8">
+            <Charge Link="Abil/MorphZerglingToBaneling2"/>
+            <Cooldown Link="Abil/MorphZerglingToBaneling2"/>
+        </InfoArray>
+        <InfoArray index="Train9">
+            <Charge Link="Abil/MorphZerglingToBaneling2"/>
+            <Cooldown Link="Abil/MorphZerglingToBaneling2"/>
+        </InfoArray>
+        <InfoArray index="Train10">
+            <Charge Link="Abil/MorphZerglingToBaneling2"/>
+            <Cooldown Link="Abil/MorphZerglingToBaneling2"/>
+        </InfoArray>
+        <InfoArray index="Train11">
+            <Charge Link="Abil/MorphZerglingToBaneling2"/>
+            <Cooldown Link="Abil/MorphZerglingToBaneling2"/>
+        </InfoArray>
+        <InfoArray index="Train12">
+            <Charge Link="Abil/MorphZerglingToBaneling2"/>
+            <Cooldown Link="Abil/MorphZerglingToBaneling2"/>
+        </InfoArray>
+        <InfoArray index="Train13">
+            <Charge Link="Abil/MorphZerglingToBaneling2"/>
+            <Cooldown Link="Abil/MorphZerglingToBaneling2"/>
+        </InfoArray>
+        <InfoArray index="Train14">
+            <Charge Link="Abil/MorphZerglingToBaneling2"/>
+            <Cooldown Link="Abil/MorphZerglingToBaneling2"/>
+        </InfoArray>
+        <InfoArray index="Train15">
+            <Charge Link="Abil/MorphZerglingToBaneling2"/>
+            <Cooldown Link="Abil/MorphZerglingToBaneling2"/>
+        </InfoArray>
+        <InfoArray index="Train16">
+            <Charge Link="Abil/MorphZerglingToBaneling2"/>
+            <Cooldown Link="Abil/MorphZerglingToBaneling2"/>
+        </InfoArray>
+        <InfoArray index="Train17">
+            <Charge Link="Abil/MorphZerglingToBaneling2"/>
+            <Cooldown Link="Abil/MorphZerglingToBaneling2"/>
+        </InfoArray>
+        <InfoArray index="Train18">
+            <Charge Link="Abil/MorphZerglingToBaneling2"/>
+            <Cooldown Link="Abil/MorphZerglingToBaneling2"/>
+        </InfoArray>
+        <InfoArray index="Train19">
+            <Charge Link="Abil/MorphZerglingToBaneling2"/>
+            <Cooldown Link="Abil/MorphZerglingToBaneling2"/>
+        </InfoArray>
+        <InfoArray index="Train20">
+            <Charge Link="Abil/MorphZerglingToBaneling2"/>
+            <Cooldown Link="Abil/MorphZerglingToBaneling2"/>
+        </InfoArray>
+        <InfoArray index="Train21">
+            <Charge Link="Abil/MorphZerglingToBaneling2"/>
+            <Cooldown Link="Abil/MorphZerglingToBaneling2"/>
+        </InfoArray>
+        <InfoArray index="Train22">
+            <Charge Link="Abil/MorphZerglingToBaneling2"/>
+            <Cooldown Link="Abil/MorphZerglingToBaneling2"/>
+        </InfoArray>
+        <InfoArray index="Train23">
+            <Charge Link="Abil/MorphZerglingToBaneling2"/>
+            <Cooldown Link="Abil/MorphZerglingToBaneling2"/>
+        </InfoArray>
+        <InfoArray index="Train24">
+            <Charge Link="Abil/MorphZerglingToBaneling2"/>
+            <Cooldown Link="Abil/MorphZerglingToBaneling2"/>
+        </InfoArray>
+        <InfoArray index="Train25">
+            <Charge Link="Abil/MorphZerglingToBaneling2"/>
+            <Cooldown Link="Abil/MorphZerglingToBaneling2"/>
+        </InfoArray>
+        <InfoArray index="Train26">
+            <Charge Link="Abil/MorphZerglingToBaneling2"/>
+            <Cooldown Link="Abil/MorphZerglingToBaneling2"/>
+        </InfoArray>
+        <InfoArray index="Train27">
+            <Charge Link="Abil/MorphZerglingToBaneling2"/>
+            <Cooldown Link="Abil/MorphZerglingToBaneling2"/>
+        </InfoArray>
+        <InfoArray index="Train28">
+            <Charge Link="Abil/MorphZerglingToBaneling2"/>
+            <Cooldown Link="Abil/MorphZerglingToBaneling2"/>
+        </InfoArray>
+        <InfoArray index="Train29">
+            <Charge Link="Abil/MorphZerglingToBaneling2"/>
+            <Cooldown Link="Abil/MorphZerglingToBaneling2"/>
+        </InfoArray>
+        <InfoArray index="Train30">
+            <Charge Link="Abil/MorphZerglingToBaneling2"/>
+            <Cooldown Link="Abil/MorphZerglingToBaneling2"/>
+        </InfoArray>
+        <Alert value="MorphComplete_Zerg"/>
+    </CAbilTrain>
+    <CAbilMorph id="BurrowZerglingUp2">
+        <AbilSetId value="BrwU"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:MorphsandBurrows"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="BurrowUp">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <ActorKey value="BurrowUp"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="IgnoreFacing" value="1"/>
+        <Flags index="SuppressMovement" value="1"/>
+        <InfoArray Unit="Alphaling" RandomDelayMax="0.5">
+            <SectionArray index="Abils">
+                <DurationArray index="Delay" value="1.0625"/>
+            </SectionArray>
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="1"/>
+            </SectionArray>
+        </InfoArray>
+        <AutoCastFilters value="Ground,Visible;Player,Ally,Neutral,Structure,Missile,Stasis,Dead,Hidden"/>
+        <AutoCastValidatorArray value="TargetNotChangeling"/>
+        <AutoCastRange value="2"/>
+        <AutoCastCountMin value="1"/>
+    </CAbilMorph>
+    <CAbilEffectTarget id="NPDomination2">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <DataCollection value="NPDomination"/>
+        <Effect index="0" value="NPDominationLM"/>
+        <Flags index="AbortOnAllianceChange" value="0"/>
+        <Cost>
+            <Resource index="Custom" value="1"/>
+            <Vital index="Energy" value="50"/>
+            <Cooldown TimeUse="5"/>
+        </Cost>
+        <TargetFilters value="Visible;Player,Ally,Neutral,Robotic,Structure,Heroic,Missile,Stasis,Dead,Invulnerable"/>
+        <Range value="8"/>
+        <RangeSlop value="10"/>
+        <AINotifyEffect value="NPDominationApplySet"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="NPDomination2"/>
+        <CmdButtonArray index="Cancel" DefaultButtonFace="Cancel"/>
+    </CAbilEffectTarget>
+    <CAbilEffectInstant id="Overlady">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <Cost>
+            <Resource index="Custom" value="2"/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Overlady"/>
+    </CAbilEffectInstant>
+    <CAbilEffectInstant id="PrimalRegression">
+        <OrderArray index="0" Model="Assets\UI\Cursors\WayPointConfirm_Void\WayPointConfirm_Void.m3"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <Effect index="0" value="PrimalMawUpgrade"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="PrimalRegressionBTN">
+            <Flags index="UseDefaultButton" value="1"/>
+        </CmdButtonArray>
+        <Cost>
+            <Resource index="Custom" value="1"/>
+            <Display index="Custom" value="1"/>
+        </Cost>
+    </CAbilEffectInstant>
+    <CAbilTrain id="BroodmotherTrain">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <Flags index="KillOnCancel" value="1"/>
+        <Flags index="KillOnFinish" value="1"/>
+        <Flags index="Select" value="1"/>
+        <Flags index="WaitForFood" value="0"/>
+        <Range value="5"/>
+        <InfoArray index="Train1" Time="5" Rotation="Source">
+            <Resource index="Minerals" value="-50"/>
+            <Display index="Custom" value="1"/>
+            <Button DefaultButtonFace="Zergling" State="Suppressed"/>
+            <Unit value="Zergling"/>
+            <Unit value="Drone"/>
+            <Unit value="Drone"/>
+        </InfoArray>
+        <InfoArray index="Train2" Time="5" Rotation="Source">
+            <Resource index="Minerals" value="-50"/>
+            <Display index="Custom" value="1"/>
+            <Button DefaultButtonFace="MorphToRaptor" State="Suppressed"/>
+            <Unit value="HotSRaptor"/>
+            <Unit value="HotSRaptor"/>
+        </InfoArray>
+        <InfoArray index="Train3" Time="2.4" Rotation="Source">
+            <Resource index="Minerals" value="-75"/>
+            <Display index="Custom" value="1"/>
+            <Button DefaultButtonFace="MorphToSwarmling" State="Suppressed"/>
+            <Unit value="HotSSwarmling"/>
+            <Unit value="HotSSwarmling"/>
+            <Unit value="HotSSwarmling"/>
+        </InfoArray>
+        <InfoArray index="Train4" Time="5" Rotation="Source">
+            <Resource index="Minerals" value="-75"/>
+            <Resource index="Vespene" value="-25"/>
+            <Display index="Custom" value="1"/>
+            <Button DefaultButtonFace="Roach" State="Suppressed"/>
+            <Unit value="Roach"/>
+        </InfoArray>
+        <InfoArray index="Train5" Time="5" Rotation="Source">
+            <Resource index="Minerals" value="-75"/>
+            <Resource index="Vespene" value="-25"/>
+            <Display index="Custom" value="1"/>
+            <Button DefaultButtonFace="RoachCorpser" State="Suppressed"/>
+            <Unit value="RoachCorpser"/>
+        </InfoArray>
+        <InfoArray index="Train6" Time="5" Rotation="Source">
+            <Resource index="Minerals" value="-75"/>
+            <Resource index="Vespene" value="-25"/>
+            <Display index="Custom" value="1"/>
+            <Button DefaultButtonFace="RoachVile" State="Suppressed"/>
+            <Unit value="RoachVile"/>
+        </InfoArray>
+        <InfoArray index="Train7" Time="5" Rotation="Source">
+            <Resource index="Minerals" value="-100"/>
+            <Resource index="Vespene" value="-50"/>
+            <Display index="Custom" value="1"/>
+            <Button DefaultButtonFace="Hydralisk" State="Suppressed"/>
+            <Unit value="Hydralisk"/>
+        </InfoArray>
+        <InfoArray index="Train8" Time="5" Rotation="Source">
+            <Resource index="Minerals" value="-100"/>
+            <Resource index="Vespene" value="-50"/>
+            <Display index="Custom" value="1"/>
+            <Button DefaultButtonFace="HydraliskLurker" State="Suppressed"/>
+            <Unit value="HydraliskLurker"/>
+        </InfoArray>
+        <InfoArray index="Train9" Time="5" Rotation="Source">
+            <Resource index="Minerals" value="-100"/>
+            <Resource index="Vespene" value="-50"/>
+            <Display index="Custom" value="1"/>
+            <Button DefaultButtonFace="HydraliskImpaler" State="Suppressed"/>
+            <Unit value="HydraliskImpaler"/>
+        </InfoArray>
+        <InfoArray index="Train10">
+            <Button DefaultButtonFace="BroodmotherDrones" Requirements="CrossSpectrumDampenersResearched"/>
+            <Unit value="Drone"/>
+        </InfoArray>
+        <IgnoreUnitCostRequirements value="CrossSpectrumDampenersResearched"/>
+        <ProxyOffset value="0,1"/>
+        <ProxyUnit value="SwarmQueenEgg"/>
+    </CAbilTrain>
+    <CAbilEffectInstant id="ReplenishBroodmother">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <Cost>
+            <Resource index="Custom" value="10"/>
+            <Display index="Custom" value="1"/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="MasteryAbathurBiomassRefund"/>
+    </CAbilEffectInstant>
+    <CAbilTrain id="TrainBroodmother">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Structures"/>
+        <Activity value="UI/Spawning"/>
+        <InfoArray index="Train1" Time="30" Effect="QueenBirth">
+            <Display index="Custom" value="1"/>
+            <Charge Link="Abil/TrainQueen2"/>
+            <Cooldown Link="Abil/TrainQueen2"/>
+            <Button DefaultButtonFace="Queen" Requirements="HaveSpawningPool">
+                <Flags index="ToSelection" value="1"/>
+            </Button>
+            <Unit value="Broodmother"/>
+        </InfoArray>
+        <InfoArray index="Train2" Time="90">
+            <Charge Link="Abil/TrainQueen2"/>
+            <Cooldown Link="Abil/TrainQueen2"/>
+            <Button DefaultButtonFace="HotSLeviathan" Requirements="HaveDestroyerLeviathan"/>
+            <Unit value="HotSLeviathan"/>
+        </InfoArray>
+        <InfoArray index="Train3">
+            <Charge Link="Abil/TrainQueen2"/>
+            <Cooldown Link="Abil/TrainQueen2"/>
+        </InfoArray>
+        <InfoArray index="Train4">
+            <Charge Link="Abil/TrainQueen2"/>
+            <Cooldown Link="Abil/TrainQueen2"/>
+        </InfoArray>
+        <InfoArray index="Train5">
+            <Charge Link="Abil/TrainQueen2"/>
+            <Cooldown Link="Abil/TrainQueen2"/>
+        </InfoArray>
+        <InfoArray index="Train6">
+            <Charge Link="Abil/TrainQueen2"/>
+            <Cooldown Link="Abil/TrainQueen2"/>
+        </InfoArray>
+        <InfoArray index="Train7">
+            <Charge Link="Abil/TrainQueen2"/>
+            <Cooldown Link="Abil/TrainQueen2"/>
+        </InfoArray>
+        <InfoArray index="Train8">
+            <Charge Link="Abil/TrainQueen2"/>
+            <Cooldown Link="Abil/TrainQueen2"/>
+        </InfoArray>
+        <InfoArray index="Train9">
+            <Charge Link="Abil/TrainQueen2"/>
+            <Cooldown Link="Abil/TrainQueen2"/>
+        </InfoArray>
+        <InfoArray index="Train10">
+            <Charge Link="Abil/TrainQueen2"/>
+            <Cooldown Link="Abil/TrainQueen2"/>
+        </InfoArray>
+        <InfoArray index="Train11">
+            <Charge Link="Abil/TrainQueen2"/>
+            <Cooldown Link="Abil/TrainQueen2"/>
+        </InfoArray>
+        <InfoArray index="Train12">
+            <Charge Link="Abil/TrainQueen2"/>
+            <Cooldown Link="Abil/TrainQueen2"/>
+        </InfoArray>
+        <InfoArray index="Train13">
+            <Charge Link="Abil/TrainQueen2"/>
+            <Cooldown Link="Abil/TrainQueen2"/>
+        </InfoArray>
+        <InfoArray index="Train14">
+            <Charge Link="Abil/TrainQueen2"/>
+            <Cooldown Link="Abil/TrainQueen2"/>
+        </InfoArray>
+        <InfoArray index="Train15">
+            <Charge Link="Abil/TrainQueen2"/>
+            <Cooldown Link="Abil/TrainQueen2"/>
+        </InfoArray>
+        <InfoArray index="Train16">
+            <Charge Link="Abil/TrainQueen2"/>
+            <Cooldown Link="Abil/TrainQueen2"/>
+        </InfoArray>
+        <InfoArray index="Train17">
+            <Charge Link="Abil/TrainQueen2"/>
+            <Cooldown Link="Abil/TrainQueen2"/>
+        </InfoArray>
+        <InfoArray index="Train18">
+            <Charge Link="Abil/TrainQueen2"/>
+            <Cooldown Link="Abil/TrainQueen2"/>
+        </InfoArray>
+        <InfoArray index="Train19">
+            <Charge Link="Abil/TrainQueen2"/>
+            <Cooldown Link="Abil/TrainQueen2"/>
+        </InfoArray>
+        <InfoArray index="Train20">
+            <Charge Link="Abil/TrainQueen2"/>
+            <Cooldown Link="Abil/TrainQueen2"/>
+        </InfoArray>
+        <InfoArray index="Train21">
+            <Charge Link="Abil/TrainQueen2"/>
+            <Cooldown Link="Abil/TrainQueen2"/>
+        </InfoArray>
+        <InfoArray index="Train22">
+            <Charge Link="Abil/TrainQueen2"/>
+            <Cooldown Link="Abil/TrainQueen2"/>
+        </InfoArray>
+        <InfoArray index="Train23">
+            <Charge Link="Abil/TrainQueen2"/>
+            <Cooldown Link="Abil/TrainQueen2"/>
+        </InfoArray>
+        <InfoArray index="Train24">
+            <Charge Link="Abil/TrainQueen2"/>
+            <Cooldown Link="Abil/TrainQueen2"/>
+        </InfoArray>
+        <InfoArray index="Train25">
+            <Charge Link="Abil/TrainQueen2"/>
+            <Cooldown Link="Abil/TrainQueen2"/>
+        </InfoArray>
+        <InfoArray index="Train26">
+            <Charge Link="Abil/TrainQueen2"/>
+            <Cooldown Link="Abil/TrainQueen2"/>
+        </InfoArray>
+        <InfoArray index="Train27">
+            <Charge Link="Abil/TrainQueen2"/>
+            <Cooldown Link="Abil/TrainQueen2"/>
+        </InfoArray>
+        <InfoArray index="Train28">
+            <Charge Link="Abil/TrainQueen2"/>
+            <Cooldown Link="Abil/TrainQueen2"/>
+        </InfoArray>
+        <InfoArray index="Train29">
+            <Charge Link="Abil/TrainQueen2"/>
+            <Cooldown Link="Abil/TrainQueen2"/>
+        </InfoArray>
+        <InfoArray index="Train30">
+            <Charge Link="Abil/TrainQueen2"/>
+            <Cooldown Link="Abil/TrainQueen2"/>
+        </InfoArray>
+    </CAbilTrain>
+</Catalog>

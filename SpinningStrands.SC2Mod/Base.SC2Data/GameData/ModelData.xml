@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CModel id="BanelingCocoon2" parent="BanelingCocoonBase">
+        <Model value="Assets\Units\Zerg\BanelingEgg\BanelingEgg.m3"/>
+    </CModel>
+    <CModel id="BanelingCocoon3" parent="BanelingCocoonBase">
+        <Model value="Assets\Units\Zerg\BanelingEgg\BanelingEgg.m3"/>
+    </CModel>
+    <CModel id="BanelingCocoonDeath2" parent="BanelingCocoonDeathBase" low="ZergSmallUnitDeathLow2">
+        <Model value="Assets\Units\Zerg\BanelingEggDeathEx1\BanelingEggDeathEx1.m3"/>
+    </CModel>
+    <CModel id="BanelingCocoonDeath3" parent="BanelingCocoonDeathBase" low="ZergSmallUnitDeathLow3">
+        <Model value="Assets\Units\Zerg\BanelingEggDeathEx1\BanelingEggDeathEx1.m3"/>
+    </CModel>
+    <CModel id="BanelingCocoonPortrait2" parent="BanelingCocoonPortraitBase">
+        <Model value="Assets\Portraits\Zerg\BanelingCocoonPortrait\BanelingCocoonPortrait.m3"/>
+        <Image value="Assets\Textures\BanelingCocoonPortrait_Static.dds"/>
+        <Lighting value="BanelingCocoonPortrait"/>
+    </CModel>
+    <CModel id="BanelingCocoonPortrait3" parent="BanelingCocoonPortraitBase">
+        <Model value="Assets\Portraits\Zerg\BanelingCocoonPortrait\BanelingCocoonPortrait.m3"/>
+        <Image value="Assets\Textures\BanelingCocoonPortrait_Static.dds"/>
+        <Lighting value="BanelingCocoonPortrait"/>
+    </CModel>
+    <CModel id="Invisible2" Race="Neutral">
+        <Model value="Assets\Units\Test\InvisibleUnit\InvisibleUnit.m3"/>
+        <EditorCategories value="Race:Neutral"/>
+        <Flags index="TeenSafe" value="1"/>
+        <Radius value="-1.000000"/>
+        <SelectionRadius value="0.000000"/>
+        <ShadowRadius value="0.000000"/>
+    </CModel>
+    <CModel id="Invisible3" Race="Neutral">
+        <Model value="Assets\Units\Test\InvisibleUnit\InvisibleUnit.m3"/>
+        <EditorCategories value="Race:Neutral"/>
+        <Flags index="TeenSafe" value="1"/>
+        <Radius value="-1.000000"/>
+        <SelectionRadius value="0.000000"/>
+        <ShadowRadius value="0.000000"/>
+    </CModel>
+    <CModel id="Invisible4" Race="Neutral">
+        <Model value="Assets\Units\Test\InvisibleUnit\InvisibleUnit.m3"/>
+        <EditorCategories value="Race:Neutral"/>
+        <Flags index="TeenSafe" value="1"/>
+        <Radius value="-1.000000"/>
+        <SelectionRadius value="0.000000"/>
+        <ShadowRadius value="0.000000"/>
+    </CModel>
+    <CModel id="NeuralParasiteModel2" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Zerg\NeuralParasite\NeuralParasite.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+        <Radius value="1.000000"/>
+    </CModel>
+    <CModel id="NeuralParasiteTentacle2" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Zerg\InfestorSiphon\InfestorSiphon.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+        <ScaleMax value="0.850000,0.850000,0.850000"/>
+        <ScaleMin value="0.850000,0.850000,0.850000"/>
+    </CModel>
+    <CModel id="ProtossSmallUnitDeathLow2" parent="UnitDeath" Race="Protoss">
+        <Model value="Assets\Effects\Protoss\ProtossUnitDeath\ProtossUnitDeath_Low.m3"/>
+        <Flags index="TeenSafe" value="1"/>
+        <ScaleMax value="1.250000,1.250000,1.250000"/>
+        <ScaleMin value="1.250000,1.250000,1.250000"/>
+        <SelectionRadius value="0.400000"/>
+        <ShadowRadius value="0.400000"/>
+    </CModel>
+    <CModel id="ProtossSmallUnitDeathLow3" parent="UnitDeath" Race="Protoss">
+        <Model value="Assets\Effects\Protoss\ProtossUnitDeath\ProtossUnitDeath_Low.m3"/>
+        <Flags index="TeenSafe" value="1"/>
+        <ScaleMax value="1.250000,1.250000,1.250000"/>
+        <ScaleMin value="1.250000,1.250000,1.250000"/>
+        <SelectionRadius value="0.400000"/>
+        <ShadowRadius value="0.400000"/>
+    </CModel>
+    <CModel id="TerranSmallUnitDeathLow2" parent="UnitDeath" Race="Terran">
+        <Model value="Assets\Effects\Terran\TerranSmallUnitDeath\TerranSmallUnitDeath_Low.m3"/>
+        <Flags index="TeenSafe" value="1"/>
+        <ScaleMax value="1.100000,1.100000,1.100000"/>
+        <ScaleMin value="1.100000,1.100000,1.100000"/>
+        <SelectionRadius value="0.454300"/>
+        <ShadowRadius value="0.454300"/>
+    </CModel>
+    <CModel id="TerranSmallUnitDeathLow3" parent="UnitDeath" Race="Terran">
+        <Model value="Assets\Effects\Terran\TerranSmallUnitDeath\TerranSmallUnitDeath_Low.m3"/>
+        <Flags index="TeenSafe" value="1"/>
+        <ScaleMax value="1.100000,1.100000,1.100000"/>
+        <ScaleMin value="1.100000,1.100000,1.100000"/>
+        <SelectionRadius value="0.454300"/>
+        <ShadowRadius value="0.454300"/>
+    </CModel>
+    <CModel id="ZergSmallUnitDeathLow2" parent="UnitDeath" Race="Zerg">
+        <Model value="Assets\Effects\Zerg\ZergSmallUnitDeath\ZergSmallUnitDeath_low.m3"/>
+        <Flags index="TeenSafe" value="1"/>
+        <Occlusion value="Show"/>
+        <ScaleMax value="0.800000,0.800000,0.800000"/>
+        <ScaleMin value="0.800000,0.800000,0.800000"/>
+        <SelectionRadius value="0.625000"/>
+        <ShadowRadius value="0.625000"/>
+    </CModel>
+    <CModel id="ZergSmallUnitDeathLow3" parent="UnitDeath" Race="Zerg">
+        <Model value="Assets\Effects\Zerg\ZergSmallUnitDeath\ZergSmallUnitDeath_low.m3"/>
+        <Flags index="TeenSafe" value="1"/>
+        <Occlusion value="Show"/>
+        <ScaleMax value="0.800000,0.800000,0.800000"/>
+        <ScaleMin value="0.800000,0.800000,0.800000"/>
+        <SelectionRadius value="0.625000"/>
+        <ShadowRadius value="0.625000"/>
+    </CModel>
+</Catalog>

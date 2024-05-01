@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Preload>
+<Actor id="SYSTEM_ActorConfig"/>
+<Sound id="UI_ConsoleIn_Zerg"/>
+<Sound id="UI_ResourcePickup"/>
+<Unit id="DNAPickup"/>
+</Preload>

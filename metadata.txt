@@ -1,0 +1,5 @@
+title=Spinning Strands
+desc=A Tactical Arsenal style mod with unique resource mechanincs
+author=Morgana
+campaign=HotS
+version=0.01

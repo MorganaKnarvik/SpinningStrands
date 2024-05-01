@@ -1,0 +1,9 @@
+﻿FunctionDef/Name/lib_784CF29E_FD53CEC8=Consume Critter
+Library/Name/784CF29E=Strandsutils
+ParamDef/Name/lib_784CF29E_44F4902A=CHOSEN_UNIT
+Trigger/Name/lib_784CF29E_1AD2EE2F=Biomass Initilization
+Trigger/Name/lib_784CF29E_54EC18E4=DisableAchieves
+Trigger/Name/lib_784CF29E_F10B5F08=Critter is Killed
+Variable/Name/lib_784CF29E_59BF6D30=EssenceUnit
+Variable/Name/lib_784CF29E_72FAF431=EssenceSupply
+Variable/Name/lib_784CF29E_E1BC02D0=Beast

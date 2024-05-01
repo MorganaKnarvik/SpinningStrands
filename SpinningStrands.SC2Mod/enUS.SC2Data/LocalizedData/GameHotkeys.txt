@@ -1,0 +1,11 @@
+﻿Button/Hotkey/AcidMawBTN=O
+Button/Hotkey/Attack2=A
+Button/Hotkey/BrainExpansionBTN=G
+Button/Hotkey/BroodmotherDrones=Y
+Button/Hotkey/BruteTyrannyBtn=T
+Button/Hotkey/DarkArchonConfusion2=F
+Button/Hotkey/MorphtoAlphaBTN=F
+Button/Hotkey/NPDomination2=E
+Button/Hotkey/Overlady=H
+Button/Hotkey/PrimalRegressionBTN=P
+Button/Hotkey/Rally2=Y

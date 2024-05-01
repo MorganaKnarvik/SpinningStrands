@@ -1,0 +1,159 @@
+include "TriggerLibs/NativeLib"
+
+include "Lib784CF29E_h"
+
+//--------------------------------------------------------------------------------------------------
+// Library: Strandsutils
+//--------------------------------------------------------------------------------------------------
+// External Library Initialization
+void lib784CF29E_InitLibraries () {
+    libNtve_InitVariables();
+}
+
+// Functions
+trigger auto_lib784CF29E_gf_ConsumeCritter_Trigger = null;
+unit auto_lib784CF29E_gf_ConsumeCritter_lp_cHOSEN_UNIT;
+
+void lib784CF29E_gf_ConsumeCritter (unit lp_cHOSEN_UNIT) {
+    auto_lib784CF29E_gf_ConsumeCritter_lp_cHOSEN_UNIT = lp_cHOSEN_UNIT;
+
+    if (auto_lib784CF29E_gf_ConsumeCritter_Trigger == null) {
+        auto_lib784CF29E_gf_ConsumeCritter_Trigger = TriggerCreate("auto_lib784CF29E_gf_ConsumeCritter_TriggerFunc");
+    }
+
+    TriggerExecute(auto_lib784CF29E_gf_ConsumeCritter_Trigger, false, false);
+}
+
+bool auto_lib784CF29E_gf_ConsumeCritter_TriggerFunc (bool testConds, bool runActions) {
+    unit lp_cHOSEN_UNIT = auto_lib784CF29E_gf_ConsumeCritter_lp_cHOSEN_UNIT;
+
+    // Variable Declarations
+    int lv_essenceSupply;
+    unit lv_essenceUnit;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+    lv_essenceSupply = UnitGetPropertyInt(lp_cHOSEN_UNIT, c_unitPropSuppliesUsed, c_unitPropNormal);
+
+    // Implementation
+    libNtve_gf_CreateUnitsWithDefaultFacing(1, "DNAPickup", 0, 1, UnitGetPosition(lp_cHOSEN_UNIT));
+    lv_essenceUnit = UnitLastCreated();
+    Wait(1.5, c_timeGame);
+    SoundPlayAtPoint(SoundLink("UI_ResourcePickup", -1), PlayerGroupAll(), UnitGetPosition(lv_essenceUnit), 0.0, 100.0, 0.0);
+    UnitKill(lv_essenceUnit);
+    if ((lv_essenceSupply == 0)) {
+        PlayerModifyPropertyInt(1, c_playerPropCustom, c_playerPropOperAdd, 2);
+        PlayerModifyPropertyInt(1, c_playerPropCustomCollected, c_playerPropOperAdd, 2);
+    }
+    else {
+        PlayerModifyPropertyInt(1, c_playerPropCustom, c_playerPropOperAdd, lv_essenceSupply);
+        PlayerModifyPropertyInt(1, c_playerPropCustomCollected, c_playerPropOperAdd, lv_essenceSupply);
+    }
+    TextTagCreate(StringExternal("Param/Value/lib_784CF29E_A5514E98"), 24, UnitGetPosition(lv_essenceUnit), 1.5, true, true, PlayerGroupAll());
+    TextTagSetVelocity(TextTagLastCreated(), 0.5, 90.0);
+    TextTagSetTime(TextTagLastCreated(), c_textTagTimeDuration, 3.0);
+    return true;
+}
+
+// Triggers
+//--------------------------------------------------------------------------------------------------
+// Trigger: Biomass Initilization
+//--------------------------------------------------------------------------------------------------
+bool lib784CF29E_gt_BiomassInitilization_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UISetResourceVisible(PlayerGroupAll(), c_resourceTypeCustom, true);
+    PlayerModifyPropertyInt(1, c_playerPropCustom, c_playerPropOperSetTo, 2);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib784CF29E_gt_BiomassInitilization_Init () {
+    lib784CF29E_gt_BiomassInitilization = TriggerCreate("lib784CF29E_gt_BiomassInitilization_Func");
+    TriggerAddEventTimeElapsed(lib784CF29E_gt_BiomassInitilization, 1.0, c_timeGame);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Critter is Killed
+//--------------------------------------------------------------------------------------------------
+bool lib784CF29E_gt_CritterisKilled_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    int lv_beast;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+
+    // Conditions
+    if (testConds) {
+        if (!((UnitGetOwner(EventUnit()) != 0))) {
+            return false;
+        }
+
+        if (!((UnitGetOwner(EventUnit()) != 1))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    SoundPlayAtPoint(SoundLink("UI_ConsoleIn_Zerg", -1), PlayerGroupAll(), UnitGetPosition(EventUnit()), 0.0, 100.0, 0.0);
+    lib784CF29E_gf_ConsumeCritter(EventUnit());
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib784CF29E_gt_CritterisKilled_Init () {
+    lib784CF29E_gt_CritterisKilled = TriggerCreate("lib784CF29E_gt_CritterisKilled_Func");
+    TriggerAddEventUnitDied(lib784CF29E_gt_CritterisKilled, null);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: DisableAchieves
+//--------------------------------------------------------------------------------------------------
+bool lib784CF29E_gt_DisableAchieves_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    AchievementsDisable(1);
+    UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, StringExternal("Param/Value/lib_784CF29E_9CA75FB5"));
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib784CF29E_gt_DisableAchieves_Init () {
+    lib784CF29E_gt_DisableAchieves = TriggerCreate("lib784CF29E_gt_DisableAchieves_Func");
+    TriggerAddEventTimeElapsed(lib784CF29E_gt_DisableAchieves, 1.0, c_timeGame);
+}
+
+void lib784CF29E_InitTriggers () {
+    lib784CF29E_gt_BiomassInitilization_Init();
+    lib784CF29E_gt_CritterisKilled_Init();
+    lib784CF29E_gt_DisableAchieves_Init();
+}
+
+//--------------------------------------------------------------------------------------------------
+// Library Initialization
+//--------------------------------------------------------------------------------------------------
+bool lib784CF29E_InitLib_completed = false;
+
+void lib784CF29E_InitLib () {
+    if (lib784CF29E_InitLib_completed) {
+        return;
+    }
+
+    lib784CF29E_InitLib_completed = true;
+
+    lib784CF29E_InitLibraries();
+    lib784CF29E_InitTriggers();
+}
+

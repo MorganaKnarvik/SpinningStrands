@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CUpgrade id="ZergMeleeWeaponsLevel12" parent="ZergMeleeWeapons">
+        <Name value="Upgrade/Name/ZergMeleeWeaponsLevel12"/>
+        <Icon value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level1.dds"/>
+        <ScoreAmount value="200"/>
+        <EffectArray Operation="Set" Reference="Weapon,Claws,Icon" Value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level1.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,NeedleClaws,Icon" Value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level1.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,KaiserBlades,Icon" Value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level1.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,Ram,Icon" Value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level1.dds"/>
+        <EffectArray Reference="Effect,BurrowChargeMPTargetDamage,Amount" Value="2"/>
+        <EffectArray Reference="Effect,BurrowChargeMPTargetDamage,AttributeBonus[Armored]" Value="2"/>
+        <EffectArray Operation="Set" Reference="Weapon,Dehaka,Icon" Value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level1.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,HotSRaptorClaws,Icon" Value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level1.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,HotSSwarmlingClaws,Icon" Value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level1.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,PrimalMaw,Icon" Value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level1.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,BrakkClaws,Icon" Value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level1.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,Brutalize,Icon" Value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level1.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,InfestedAbomination,Icon" Value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level1.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,RoachlingNeedleClaws,Icon" Value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level1.dds"/>
+        <EffectArray Reference="Effect,Dehaka,Amount" Value="2"/>
+        <EffectArray Reference="Effect,Dehaka,AttributeBonus[Structure]" Value="2"/>
+        <EffectArray Reference="Effect,HotSBanelingExplodeLargeDirect,Amount" Value="4"/>
+        <EffectArray Reference="Effect,HotSBanelingExplodeLargeDirect,AttributeBonus[Structure]" Value="1"/>
+        <EffectArray Reference="Effect,HotSBanelingExplodeLargeSearchDamage,Amount" Value="4"/>
+        <EffectArray Reference="Effect,HotSBanelingExplodeLargeSearchDamage,AttributeBonus[Structure]" Value="1"/>
+        <EffectArray Reference="Effect,HotSBanelingExplodeSmallSearchDamage,Amount" Value="1"/>
+        <EffectArray Reference="Effect,HotSBanelingExplodeSmallSearchDamage,AttributeBonus[Structure]" Value="1"/>
+        <EffectArray Reference="Effect,HotSBanelingExplodeSmallDirect,Amount" Value="1"/>
+        <EffectArray Reference="Effect,HotSBanelingExplodeSmallDirect,AttributeBonus[Structure]" Value="1"/>
+        <EffectArray Reference="Weapon,Dehaka,Level" Value="1"/>
+        <EffectArray Reference="Weapon,HotSBanelingDummy,Level" Value="1"/>
+        <EffectArray Reference="Weapon,HotSBanelingDummySmall,Level" Value="1"/>
+        <EffectArray Reference="Weapon,HotSRaptorClaws,Level" Value="1"/>
+        <EffectArray Reference="Effect,HotSRaptorClawsDamage,Amount" Value="1"/>
+        <EffectArray Reference="Weapon,HotSSwarmlingClaws,Level" Value="1"/>
+        <EffectArray Reference="Effect,HotSSwarmlingClawsDamage,Amount" Value="1"/>
+        <EffectArray Reference="Effect,HotSUltraliskKaiserBladesDamage,Amount" Value="2"/>
+        <EffectArray Reference="Weapon,PrimalMaw,Level" Value="1"/>
+        <EffectArray Reference="Effect,PrimalZergling,Amount" Value="1"/>
+        <EffectArray Reference="Weapon,BrakkClaws,Level" Value="1"/>
+        <EffectArray Reference="Effect,BrakkMeleeDamage,Amount" Value="3"/>
+        <EffectArray Reference="Effect,PrimalUltralisk,Amount" Value="3"/>
+        <EffectArray Reference="Weapon,Brutalize,Level" Value="1"/>
+        <EffectArray Reference="Effect,BrutalizeDamage,Amount" Value="5"/>
+        <EffectArray Reference="Weapon,InfestedAbomination,Level" Value="1"/>
+        <EffectArray Reference="Effect,InfestedAbomination,Amount" Value="2"/>
+        <EffectArray Reference="Effect,InfestedAbomination,AttributeBonus[Armored]" Value="1"/>
+        <EffectArray Reference="Effect,TissueAssimilation,VitalArray[Life].Change" Value="0.8"/>
+        <EffectArray Reference="Effect,HotSUltraliskKaiserBladesSecondaryDamage,Amount" Value="1"/>
+        <EffectArray Reference="Effect,HotSUltraliskKaiserBladesSecondaryUpgradeDamage,Amount" Value="2"/>
+        <EffectArray Reference="Weapon,RoachlingNeedleClaws,Level" Value="1"/>
+        <EffectArray Reference="Effect,RoachlingNeedleClawsDamage,Amount" Value="1"/>
+        <AffectedUnitArray value="LocustMP"/>
+        <AffectedUnitArray value="Dehaka"/>
+        <AffectedUnitArray value="DehakaBurrowed"/>
+        <AffectedUnitArray value="HotSHunter"/>
+        <AffectedUnitArray value="HotSHunterBurrowed"/>
+        <AffectedUnitArray value="HotSSplitterlingBig"/>
+        <AffectedUnitArray value="HotSSplitterlingMedium"/>
+        <AffectedUnitArray value="HotSSplitterlingBigBurrowed"/>
+        <AffectedUnitArray value="HotSSplitterlingMediumBurrowed"/>
+        <AffectedUnitArray value="HotSRaptor"/>
+        <AffectedUnitArray value="HotSRaptorBurrowed"/>
+        <AffectedUnitArray value="HotSSwarmling"/>
+        <AffectedUnitArray value="HotSSwarmlingBurrowed"/>
+        <AffectedUnitArray value="HotSTorrasque"/>
+        <AffectedUnitArray value="HotSTorrasqueBurrowed"/>
+        <AffectedUnitArray value="HotSNoxious"/>
+        <AffectedUnitArray value="HotSNoxiousBurrowed"/>
+        <AffectedUnitArray value="PrimalZergling"/>
+        <AffectedUnitArray value="PrimalUltralisk"/>
+        <AffectedUnitArray value="Brutalisk"/>
+        <AffectedUnitArray value="InfestedAbomination"/>
+        <AffectedUnitArray value="InfestedAbominationBurrowed"/>
+        <AffectedUnitArray value="Roachling"/>
+        <AffectedUnitArray value="Brakk"/>
+        <LeaderLevel value="1"/>
+    </CUpgrade>
+    <CUpgrade id="ZergMeleeWeaponsLevel22" parent="ZergMeleeWeapons">
+        <Name value="Upgrade/Name/ZergMeleeWeaponsLevel22"/>
+        <Icon value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level2.dds"/>
+        <ScoreAmount value="300"/>
+        <EffectArray Operation="Set" Reference="Weapon,Claws,Icon" Value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level2.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,NeedleClaws,Icon" Value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level2.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,KaiserBlades,Icon" Value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level2.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,Ram,Icon" Value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level2.dds"/>
+        <EffectArray Reference="Effect,BurrowChargeMPTargetDamage,Amount" Value="2"/>
+        <EffectArray Reference="Effect,BurrowChargeMPTargetDamage,AttributeBonus[Armored]" Value="2"/>
+        <EffectArray Operation="Set" Reference="Weapon,Dehaka,Icon" Value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level2.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,HotSRaptorClaws,Icon" Value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level2.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,HotSSwarmlingClaws,Icon" Value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level2.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,PrimalMaw,Icon" Value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level2.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,BrakkClaws,Icon" Value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level2.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,Brutalize,Icon" Value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level2.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,InfestedAbomination,Icon" Value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level2.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,RoachlingNeedleClaws,Icon" Value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level2.dds"/>
+        <EffectArray Reference="Effect,Dehaka,Amount" Value="2"/>
+        <EffectArray Reference="Effect,Dehaka,AttributeBonus[Structure]" Value="2"/>
+        <EffectArray Reference="Effect,HotSBanelingExplodeLargeDirect,Amount" Value="4"/>
+        <EffectArray Reference="Effect,HotSBanelingExplodeLargeDirect,AttributeBonus[Structure]" Value="1"/>
+        <EffectArray Reference="Effect,HotSBanelingExplodeLargeSearchDamage,Amount" Value="4"/>
+        <EffectArray Reference="Effect,HotSBanelingExplodeLargeSearchDamage,AttributeBonus[Structure]" Value="1"/>
+        <EffectArray Reference="Effect,HotSBanelingExplodeSmallSearchDamage,Amount" Value="1"/>
+        <EffectArray Reference="Effect,HotSBanelingExplodeSmallSearchDamage,AttributeBonus[Structure]" Value="1"/>
+        <EffectArray Reference="Effect,HotSBanelingExplodeSmallDirect,Amount" Value="1"/>
+        <EffectArray Reference="Effect,HotSBanelingExplodeSmallDirect,AttributeBonus[Structure]" Value="1"/>
+        <EffectArray Reference="Weapon,Dehaka,Level" Value="1"/>
+        <EffectArray Reference="Weapon,HotSBanelingDummy,Level" Value="1"/>
+        <EffectArray Reference="Weapon,HotSBanelingDummySmall,Level" Value="1"/>
+        <EffectArray Reference="Weapon,HotSRaptorClaws,Level" Value="1"/>
+        <EffectArray Reference="Effect,HotSRaptorClawsDamage,Amount" Value="1"/>
+        <EffectArray Reference="Weapon,HotSSwarmlingClaws,Level" Value="1"/>
+        <EffectArray Reference="Effect,HotSSwarmlingClawsDamage,Amount" Value="1"/>
+        <EffectArray Reference="Effect,HotSUltraliskKaiserBladesDamage,Amount" Value="2"/>
+        <EffectArray Reference="Weapon,PrimalMaw,Level" Value="1"/>
+        <EffectArray Reference="Effect,PrimalZergling,Amount" Value="1"/>
+        <EffectArray Reference="Weapon,BrakkClaws,Level" Value="1"/>
+        <EffectArray Reference="Effect,BrakkMeleeDamage,Amount" Value="3"/>
+        <EffectArray Reference="Effect,PrimalUltralisk,Amount" Value="3"/>
+        <EffectArray Reference="Weapon,Brutalize,Level" Value="1"/>
+        <EffectArray Reference="Effect,BrutalizeDamage,Amount" Value="5"/>
+        <EffectArray Reference="Weapon,InfestedAbomination,Level" Value="1"/>
+        <EffectArray Reference="Effect,InfestedAbomination,Amount" Value="2"/>
+        <EffectArray Reference="Effect,InfestedAbomination,AttributeBonus[Armored]" Value="1"/>
+        <EffectArray Reference="Effect,TissueAssimilation,VitalArray[Life].Change" Value="0.8"/>
+        <EffectArray Reference="Effect,HotSUltraliskKaiserBladesSecondaryDamage,Amount" Value="1"/>
+        <EffectArray Reference="Effect,HotSUltraliskKaiserBladesSecondaryUpgradeDamage,Amount" Value="2"/>
+        <EffectArray Reference="Weapon,RoachlingNeedleClaws,Level" Value="1"/>
+        <EffectArray Reference="Effect,RoachlingNeedleClawsDamage,Amount" Value="1"/>
+        <AffectedUnitArray value="LocustMP"/>
+        <AffectedUnitArray value="Dehaka"/>
+        <AffectedUnitArray value="DehakaBurrowed"/>
+        <AffectedUnitArray value="HotSHunter"/>
+        <AffectedUnitArray value="HotSHunterBurrowed"/>
+        <AffectedUnitArray value="HotSSplitterlingBig"/>
+        <AffectedUnitArray value="HotSSplitterlingMedium"/>
+        <AffectedUnitArray value="HotSSplitterlingBigBurrowed"/>
+        <AffectedUnitArray value="HotSSplitterlingMediumBurrowed"/>
+        <AffectedUnitArray value="HotSRaptor"/>
+        <AffectedUnitArray value="HotSRaptorBurrowed"/>
+        <AffectedUnitArray value="HotSSwarmling"/>
+        <AffectedUnitArray value="HotSSwarmlingBurrowed"/>
+        <AffectedUnitArray value="HotSTorrasque"/>
+        <AffectedUnitArray value="HotSTorrasqueBurrowed"/>
+        <AffectedUnitArray value="HotSNoxious"/>
+        <AffectedUnitArray value="HotSNoxiousBurrowed"/>
+        <AffectedUnitArray value="PrimalZergling"/>
+        <AffectedUnitArray value="PrimalUltralisk"/>
+        <AffectedUnitArray value="Brutalisk"/>
+        <AffectedUnitArray value="InfestedAbomination"/>
+        <AffectedUnitArray value="InfestedAbominationBurrowed"/>
+        <AffectedUnitArray value="Roachling"/>
+        <AffectedUnitArray value="Brakk"/>
+        <LeaderLevel value="2"/>
+    </CUpgrade>
+    <CUpgrade id="ZergMeleeWeaponsLevel32" parent="ZergMeleeWeapons">
+        <Name value="Upgrade/Name/ZergMeleeWeaponsLevel32"/>
+        <Icon value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level3.dds"/>
+        <ScoreAmount value="400"/>
+        <EffectArray Operation="Set" Reference="Weapon,Claws,Icon" Value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level3.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,NeedleClaws,Icon" Value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level3.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,KaiserBlades,Icon" Value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level3.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,Ram,Icon" Value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level3.dds"/>
+        <EffectArray Reference="Effect,BurrowChargeMPTargetDamage,Amount" Value="2"/>
+        <EffectArray Reference="Effect,BurrowChargeMPTargetDamage,AttributeBonus[Armored]" Value="2"/>
+        <EffectArray Operation="Set" Reference="Weapon,Dehaka,Icon" Value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level3.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,HotSRaptorClaws,Icon" Value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level3.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,HotSSwarmlingClaws,Icon" Value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level3.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,PrimalMaw,Icon" Value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level3.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,BrakkClaws,Icon" Value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level3.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,Brutalize,Icon" Value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level3.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,InfestedAbomination,Icon" Value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level3.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,RoachlingNeedleClaws,Icon" Value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level3.dds"/>
+        <EffectArray Reference="Effect,Dehaka,Amount" Value="2"/>
+        <EffectArray Reference="Effect,Dehaka,AttributeBonus[Structure]" Value="2"/>
+        <EffectArray Reference="Effect,HotSBanelingExplodeLargeDirect,Amount" Value="4"/>
+        <EffectArray Reference="Effect,HotSBanelingExplodeLargeDirect,AttributeBonus[Structure]" Value="1"/>
+        <EffectArray Reference="Effect,HotSBanelingExplodeLargeSearchDamage,Amount" Value="4"/>
+        <EffectArray Reference="Effect,HotSBanelingExplodeLargeSearchDamage,AttributeBonus[Structure]" Value="1"/>
+        <EffectArray Reference="Effect,HotSBanelingExplodeSmallSearchDamage,Amount" Value="1"/>
+        <EffectArray Reference="Effect,HotSBanelingExplodeSmallSearchDamage,AttributeBonus[Structure]" Value="1"/>
+        <EffectArray Reference="Effect,HotSBanelingExplodeSmallDirect,Amount" Value="1"/>
+        <EffectArray Reference="Effect,HotSBanelingExplodeSmallDirect,AttributeBonus[Structure]" Value="1"/>
+        <EffectArray Reference="Weapon,Dehaka,Level" Value="1"/>
+        <EffectArray Reference="Weapon,HotSBanelingDummy,Level" Value="1"/>
+        <EffectArray Reference="Weapon,HotSBanelingDummySmall,Level" Value="1"/>
+        <EffectArray Reference="Weapon,HotSRaptorClaws,Level" Value="1"/>
+        <EffectArray Reference="Effect,HotSRaptorClawsDamage,Amount" Value="1"/>
+        <EffectArray Reference="Weapon,HotSSwarmlingClaws,Level" Value="1"/>
+        <EffectArray Reference="Effect,HotSSwarmlingClawsDamage,Amount" Value="1"/>
+        <EffectArray Reference="Effect,HotSUltraliskKaiserBladesDamage,Amount" Value="2"/>
+        <EffectArray Reference="Weapon,PrimalMaw,Level" Value="1"/>
+        <EffectArray Reference="Effect,PrimalZergling,Amount" Value="1"/>
+        <EffectArray Reference="Weapon,BrakkClaws,Level" Value="1"/>
+        <EffectArray Reference="Effect,BrakkMeleeDamage,Amount" Value="3"/>
+        <EffectArray Reference="Effect,PrimalUltralisk,Amount" Value="3"/>
+        <EffectArray Reference="Weapon,Brutalize,Level" Value="1"/>
+        <EffectArray Reference="Effect,BrutalizeDamage,Amount" Value="5"/>
+        <EffectArray Reference="Weapon,InfestedAbomination,Level" Value="1"/>
+        <EffectArray Reference="Effect,InfestedAbomination,Amount" Value="2"/>
+        <EffectArray Reference="Effect,InfestedAbomination,AttributeBonus[Armored]" Value="1"/>
+        <EffectArray Reference="Effect,TissueAssimilation,VitalArray[Life].Change" Value="0.8"/>
+        <EffectArray Reference="Effect,HotSUltraliskKaiserBladesSecondaryDamage,Amount" Value="1"/>
+        <EffectArray Reference="Effect,HotSUltraliskKaiserBladesSecondaryUpgradeDamage,Amount" Value="2"/>
+        <EffectArray Reference="Weapon,RoachlingNeedleClaws,Level" Value="1"/>
+        <EffectArray Reference="Effect,RoachlingNeedleClawsDamage,Amount" Value="1"/>
+        <AffectedUnitArray value="LocustMP"/>
+        <AffectedUnitArray value="Dehaka"/>
+        <AffectedUnitArray value="DehakaBurrowed"/>
+        <AffectedUnitArray value="HotSHunter"/>
+        <AffectedUnitArray value="HotSHunterBurrowed"/>
+        <AffectedUnitArray value="HotSSplitterlingBig"/>
+        <AffectedUnitArray value="HotSSplitterlingMedium"/>
+        <AffectedUnitArray value="HotSSplitterlingBigBurrowed"/>
+        <AffectedUnitArray value="HotSSplitterlingMediumBurrowed"/>
+        <AffectedUnitArray value="HotSRaptor"/>
+        <AffectedUnitArray value="HotSRaptorBurrowed"/>
+        <AffectedUnitArray value="HotSSwarmling"/>
+        <AffectedUnitArray value="HotSSwarmlingBurrowed"/>
+        <AffectedUnitArray value="HotSTorrasque"/>
+        <AffectedUnitArray value="HotSTorrasqueBurrowed"/>
+        <AffectedUnitArray value="HotSNoxious"/>
+        <AffectedUnitArray value="HotSNoxiousBurrowed"/>
+        <AffectedUnitArray value="PrimalZergling"/>
+        <AffectedUnitArray value="PrimalUltralisk"/>
+        <AffectedUnitArray value="Brutalisk"/>
+        <AffectedUnitArray value="InfestedAbomination"/>
+        <AffectedUnitArray value="InfestedAbominationBurrowed"/>
+        <AffectedUnitArray value="Roachling"/>
+        <AffectedUnitArray value="Brakk"/>
+        <LeaderLevel value="3"/>
+    </CUpgrade>
+</Catalog>

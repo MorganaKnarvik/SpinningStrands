@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CActorUnit id="BanelingCocoon2" parent="GenericUnitMorph" unitName="AlphalingCocoon">
+        <Aliases value="_UnitSmall"/>
+        <On Terms="AbilMorph.*.Finish; MorphTo BanelingCocoon; MorphFrom Zergling" Send="AnimBaselineStop"/>
+        <On Terms="AbilMorph.*.Finish; MorphTo BanelingCocoon; MorphFrom Zergling" Send="$Birth 0 0.000000 -1.000000 0.000000"/>
+        <On Terms="AnimDone; AnimName Birth" Send="AnimBaselineStart"/>
+        <On Terms="AbilMorph.*.Finish; MorphTo BanelingCocoon; MorphFrom HotSSwarmling" Send="AnimBaselineStop"/>
+        <On Terms="AbilMorph.*.Finish; MorphTo BanelingCocoon; MorphFrom HotSSwarmling" Send="$Birth 0 0.000000 -1.000000 0.000000"/>
+        <On Terms="AbilMorph.*.Finish; MorphTo BanelingCocoon; MorphFrom HotSRaptor" Send="AnimBaselineStop"/>
+        <On Terms="AbilMorph.*.Finish; MorphTo BanelingCocoon; MorphFrom HotSRaptor" Send="$Birth 0 0.000000 -1.000000 0.000000"/>
+        <HostSiteOps Ops="SOpRotVariancerForward30"/>
+        <Model value="BanelingCocoon3"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <BuildModel value="BanelingCocoon3"/>
+        <DeathArray index="Normal" ModelLink="BanelingCocoonDeath3" SoundLink="BanelingEgg_Explode"/>
+        <DeathCustoms index="0" ModelLink="ZergSmallUnitDeathLow3"/>
+        <DeathCustoms index="1" ModelLink="ProtossSmallUnitDeathLow3"/>
+        <DeathCustoms index="2" ModelLink="TerranSmallUnitDeathLow3"/>
+        <DeathCustoms index="3" ModelLink="ZergSmallUnitDeathLow3"/>
+        <DeathCustoms index="4" ModelLink="Invisible3"/>
+        <PlacementModel value="BanelingCocoon3"/>
+        <PortraitModel value="BanelingCocoonPortrait3"/>
+        <BarOffset value="40"/>
+        <BarWidth value="36"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Zerg-BanelingEgg.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\Wireframe-Zerg-BanelingEgg.dds"/>
+        <HighlightTooltip value="Unit/Name/BanelingCocoon2"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-zerg-groundcarapace-level0.dds"/>
+        <ShieldArmorIcon value="Assets\Textures\btn-upgrade-zerg-swarmfrenzy.dds"/>
+        <SoundArray index="What" value="Egg_What"/>
+        <StatusColors index="Shields">
+            <ColorArray index="0" value="255,0,128,0"/>
+        </StatusColors>
+        <UnitIcon value="Assets\Textures\Wireframe-Zerg-BanelingEgg.dds"/>
+        <VitalColors index="Shields">
+            <ColorArray value="255,0,128,0"/>
+        </VitalColors>
+        <VitalNames index="Shields" value="Vital/ZergShields"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Zerg-BanelingEgg.dds"/>
+        </Wireframe>
+        <WireframeShieldColor value="255,0,128,0"/>
+    </CActorUnit>
+    <CActorSound id="BanelingEgg_Death2" parent="SoundOneShot">
+        <On Terms="UnitDeath.AlphalingCocoon; PassChance 25.000000" Send="Create"/>
+        <Sound value="BanelingEgg_Death"/>
+    </CActorSound>
+    <CActorSound id="BanelingEgg_Death3" parent="SoundOneShot">
+        <On Terms="UnitDeath.AlphalingCocoon; PassChance 25.000000" Send="Create"/>
+        <Sound value="BanelingEgg_Death"/>
+    </CActorSound>
+    <CActorModel id="GenericAttackDamageModel2" parent="ModelAnimationStyleOneShotNoOrphan">
+        <Flags index="SuppressCreationErrors" value="1"/>
+        <Inherits index="Visibility" value="1"/>
+        <Model value="GenericAttackModel"/>
+        <ModelFlags index="AllowHitTest" value="0"/>
+    </CActorModel>
+    <CActorModel id="GenericAttackDamageModel3" parent="ModelAnimationStyleOneShotNoOrphan">
+        <Flags index="SuppressCreationErrors" value="1"/>
+        <Inherits index="Visibility" value="1"/>
+        <Model value="GenericAttackModel"/>
+        <ModelFlags index="AllowHitTest" value="0"/>
+    </CActorModel>
+    <CActorSound id="GenericAttackDamageSound2" parent="SoundOneShot">
+        <Flags index="SuppressCreationErrors" value="1"/>
+        <Sound value="GenericAttackSound"/>
+    </CActorSound>
+    <CActorSound id="GenericAttackDamageSound3" parent="SoundOneShot">
+        <Flags index="SuppressCreationErrors" value="1"/>
+        <Sound value="GenericAttackSound"/>
+    </CActorSound>
+    <CActorModel id="GenericAttackImpactModel2" parent="ModelAnimationStyleOneShotNoOrphan">
+        <Flags index="SuppressCreationErrors" value="1"/>
+        <Inherits index="Visibility" value="1"/>
+        <Model value="GenericAttackModel"/>
+        <ModelFlags index="AllowHitTest" value="0"/>
+    </CActorModel>
+    <CActorModel id="GenericAttackImpactModel3" parent="ModelAnimationStyleOneShotNoOrphan">
+        <Flags index="SuppressCreationErrors" value="1"/>
+        <Inherits index="Visibility" value="1"/>
+        <Model value="GenericAttackModel"/>
+        <ModelFlags index="AllowHitTest" value="0"/>
+    </CActorModel>
+    <CActorSound id="GenericAttackImpactSound2" parent="SoundOneShot">
+        <Flags index="SuppressCreationErrors" value="1"/>
+        <Sound value="GenericAttackSound"/>
+    </CActorSound>
+    <CActorSound id="GenericAttackImpactSound3" parent="SoundOneShot">
+        <Flags index="SuppressCreationErrors" value="1"/>
+        <Sound value="GenericAttackSound"/>
+    </CActorSound>
+    <CActorModel id="GenericAttackLaunchModel2" parent="ModelAnimationStyleOneShotNoOrphan">
+        <Flags index="SuppressCreationErrors" value="1"/>
+        <Inherits index="Visibility" value="1"/>
+        <Model value="GenericAttackModel"/>
+        <ModelFlags index="AllowHitTest" value="0"/>
+    </CActorModel>
+    <CActorModel id="GenericAttackLaunchModel3" parent="ModelAnimationStyleOneShotNoOrphan">
+        <Flags index="SuppressCreationErrors" value="1"/>
+        <Inherits index="Visibility" value="1"/>
+        <Model value="GenericAttackModel"/>
+        <ModelFlags index="AllowHitTest" value="0"/>
+    </CActorModel>
+    <CActorSound id="GenericAttackLaunchSound2" parent="SoundOneShot">
+        <Flags index="SuppressCreationErrors" value="1"/>
+        <Sound value="GenericAttackSound"/>
+    </CActorSound>
+    <CActorSound id="GenericAttackLaunchSound3" parent="SoundOneShot">
+        <Flags index="SuppressCreationErrors" value="1"/>
+        <Sound value="GenericAttackSound"/>
+    </CActorSound>
+    <CActorUnit id="LargeSwarmQueen2" parent="GenericUnitBase" unitName="Broodmother">
+        <Aliases value="_UnitLarge"/>
+        <Macros value="TerrainSquibAnimations"/>
+        <Macros value="ZergBurrowStandardAnimMacro"/>
+        <Macros value="ZergLargeBurrowEffects"/>
+        <Macros value="UnloadDropAnim"/>
+        <On Terms="ActorCreation" Send="RefSet ::global.SwarmQueen ::Self"/>
+        <On Terms="AbilMorph.MorphToLargeSwarmQueen.Finish; MorphFrom SwarmQueenMorphing" Send="Create"/>
+        <On Terms="AbilMorph.MorphToLargeSwarmQueen.Finish; MorphFrom SwarmQueenMorphing" Send="$Birth 0 0.000000 0.250000"/>
+        <On Terms="AbilMorph.MorphToLargeSwarmQueen.Finish; MorphFrom SwarmQueenMorphing" Send="Create SwarmQueenBirth"/>
+        <On Terms="AbilMorph.MorphToLargeSwarmQueen.Finish; MorphFrom SwarmQueenMorphing" Send="Create ExpQueenCreepBombExplosion"/>
+        <On Terms="AbilMorph.MorphToHugeSwarmQueen.Start; MorphFrom LargeSwarmQueen" Send="AnimPlay Morph Morph"/>
+        <On Terms="AbilMorph.MorphToHugeSwarmQueen.Finish; MorphFrom LargeSwarmQueen" Send="Destroy"/>
+        <On Terms="UnitBirth.LargeSwarmQueenBurrowed" Send="Create"/>
+        <On Terms="UnitBirth.LargeSwarmQueenBurrowed" Send="AnimBracketStart Burrow Burrow IGNORE Unburrow ClosingFull,OpeningPlayForever,Instant"/>
+        <On Terms="UnitBirth.LargeSwarmQueen.Normal" Send="$Birth 0 0.000000"/>
+        <On Terms="AbilMorph.*.Start; AbilKey BurrowDown" Send="Create BurrowDownLarge"/>
+        <On Terms="AbilMorph.*.Cancel; MorphFrom LargeSwarmQueen; MorphTo LargeSwarmQueenBurrowed" Send="AnimClear Burrow"/>
+        <On Terms="AbilMorph.*.Finish; MorphTo LargeSwarmQueen; MorphFrom LargeSwarmQueenBurrowed" Send="AnimBracketStop Burrow"/>
+        <On Terms="AbilMorph.*.Finish; MorphTo LargeSwarmQueen; MorphFrom LargeSwarmQueenBurrowed" Send="AnimClear Burrow"/>
+        <On Terms="Abil.attack.ReadyStart" Send="AnimGroupApply Ready"/>
+        <On Terms="WeaponStart.SwarmQueenAcidSpines.AttackStart" Send="AnimBracketStart Attack Spell,C"/>
+        <On Terms="WeaponStart.SwarmQueenTalons.AttackStart; WeaponTargetDistance LE 1.000000" Send="AnimBracketStart Attack Attack,Cover"/>
+        <On Terms="WeaponStart.SwarmQueenTalons.AttackStart" Send="AnimBracketStart Attack Attack"/>
+        <On Terms="WeaponStop.*.AttackStop" Send="AnimBracketStop Attack"/>
+        <On Terms="Abil.attack.ReadyStop" Send="AnimGroupRemove Ready"/>
+        <On Terms="Signal.*.Egg; IsStatus MoveStatus 0" Send="AnimPlay WorkStart Stand,Work,Start"/>
+        <On Terms="AnimDone; AnimName WorkStart" Send="AnimPlay WorkEnd Stand,Work,End"/>
+        <On Terms="UnitMovementUpdate.LargeSwarmQueen.Stand" Send="StatusSet MoveStatus 0"/>
+        <On Terms="UnitMovementUpdate.LargeSwarmQueen.Walk" Send="StatusSet MoveStatus 1"/>
+        <On Terms="UnitMovementUpdate.LargeSwarmQueen.Walk" Send="AnimClear WorkStart"/>
+        <On Terms="UnitMovementUpdate.LargeSwarmQueen.Walk" Send="AnimClear WorkEnd"/>
+        <On Terms="UnitBirth.LargeSwarmQueen" Send="TerrainSquibActivateGroup RippleStandard"/>
+        <On Terms="AbilMorph.MorphToLargeSwarmQueen.Finish; MorphFrom SwarmQueenMorphing" Send="TerrainSquibActivateGroup RippleStandard"/>
+        <On Terms="AbilMorph.*.Finish; MorphTo LargeSwarmQueen; MorphFrom LargeSwarmQueenBurrowed" Send="TerrainSquibActivateGroup RippleStandard"/>
+        <On Terms="AbilMorph.*.Finish; MorphTo LargeSwarmQueenBurrowed; MorphFrom LargeSwarmQueen" Send="TerrainSquibDeactivate"/>
+        <Model value="LargeSwarmQueen"/>
+        <BuildModel value="LargeSwarmQueen"/>
+        <DeathArray index="Normal" ModelLink="LargeSwarmQueenDeath" SoundLink="Queen_Explode" VoiceLink="Niadra_Death"/>
+        <PlacementModel value="LargeSwarmQueen"/>
+        <PortraitActor value="SwarmQueenPortrait"/>
+        <PortraitModel value="SwarmQueenPortrait"/>
+        <TerrainSquibs>
+            <GroupName value="RippleStandard"/>
+            <MovementDistance value="0.150000,0.150000"/>
+            <IdlePeriod value="0.100000,0.250000"/>
+            <RangeUp value="2.000000"/>
+            <RangeDown value="2.000000"/>
+            <AttachQuery Methods="AMFilterCenter"/>
+            <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleLargeSwarmQueen"/>
+        </TerrainSquibs>
+        <WalkAnimMoveSpeed value="1.7031"/>
+        <BarOffset value="75"/>
+        <CustomUnitStatusFrame value="HotS_UnitStatus/KerriganHeroUnitStatusFrameTemplate"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Zerg-ExpeditionQueenLevel2.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-unit-Zerg-broodqueen.dds"/>
+        <HighlightTooltip value="Unit/Name/LargeSwarmQueen2"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-zerg-groundcarapace-level0.dds"/>
+        <SoundArray index="Ready" value="QueenReady"/>
+        <SoundArray index="Help" value="Niadra_Help"/>
+        <SoundArray index="What" value="Niadra_What"/>
+        <SoundArray index="Yes" value="Niadra_Yes"/>
+        <SoundArray index="Attack" value="Niadra_Attack"/>
+        <SoundArray index="Pissed" value="Niadra_Pissed"/>
+        <StatusBarOn index="Shields" value="1"/>
+        <StatusBarOn index="Life" value="1"/>
+        <StatusBarOn index="Energy" value="1"/>
+        <StatusBarOn index="Progress" value="1"/>
+        <StatusBarOn index="Duration" value="1"/>
+        <UnitFlags index="SuppressDefaultStatusBar" value="1"/>
+        <UnitIcon value="Assets\Textures\btn-unit-Zerg-broodqueen.dds"/>
+        <UnitKillRank Text="UnitKillRank/BroodMother"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Zerg-ExpeditionQueenLevel2.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorAction id="NPDomination2" parent="GenericAttack" effectImpact="NPDominationPersistent" effectLaunch="NPDominationLM">
+        <LaunchSiteOps Ops="SOpAttachHarnessStationary"/>
+        <LaunchSite value="NPDominationTentacleLaunchSite"/>
+        <LaunchAttachQuery Methods="Weapon 1"/>
+        <LaunchAssets Sound="Infestor_NeuralParasiteAttackLaunch"/>
+        <LaunchModel value="GenericAttackLaunchModel3"/>
+        <LaunchSound value="GenericAttackLaunchSound3"/>
+        <ContainerModel value="GenericAttackLaunchModel3"/>
+        <ContainerSound value="GenericAttackLaunchSound3"/>
+        <Missile value="NPDominationMissile2"/>
+        <ImpactSiteOps Ops="SOpAttachHarness SOpForwardLaunchGuide"/>
+        <ImpactSiteOpsReaction Ops="SOp2DRotation SOp180" HoldPosition="1" HoldRotation="1"/>
+        <ImpactAttachQuery Methods="Target 0"/>
+        <ImpactMap index="None" Sound="Infestor_NeuralParasiteAttackImpact"/>
+        <ImpactModel value="GenericAttackImpactModel3"/>
+        <ImpactSound value="GenericAttackImpactSound3"/>
+        <DamageModel value="GenericAttackDamageModel3"/>
+        <DamageSound value="GenericAttackDamageSound3"/>
+    </CActorAction>
+    <CActorSound id="NPDominationBirthSound2" parent="SoundOneShot">
+        <On Terms="Behavior.NPDomination.On" Send="Create"/>
+        <Sound value="Infestor_AttackImpact_NP"/>
+    </CActorSound>
+    <CActorMissile id="NPDominationMissile2" parent="GenericAttackMissile" unitName="NPDominationWeapon">
+        <Supporter>
+            <Subject value="NPDominationTentacle"/>
+            <Scope value="Caster"/>
+            <Actor value="Find"/>
+            <Effect value="NPDominationLM"/>
+        </Supporter>
+        <On Terms="MotionPhaseStart; MotionPhase" Target="::Supporter" Send="RefSet TentacleAttack ::Self"/>
+        <Model value="Invisible4"/>
+    </CActorMissile>
+    <CActorModel id="NPDominationModel2" parent="ModelAddition">
+        <On Terms="Behavior.NPDomination.On" Send="Create"/>
+        <On Terms="Behavior.NPDomination.On" Target="::Main" Send="SetSoundSuffix _NP"/>
+        <On Terms="Behavior.NPDomination.On" Target="::Main" Send="PlayUnitSound Ready"/>
+        <On Terms="Behavior.NPDomination.Off" Send="AnimBracketStop BSD"/>
+        <On Terms="Behavior.NPDomination.Off" Target="::Main" Send="SetSoundSuffix"/>
+        <HostSiteOps Ops="SOpAttachHead"/>
+        <Model value="NeuralParasiteModel2"/>
+    </CActorModel>
+    <CActorRange id="NPDominationRange2" parent="RangeAbil" abil="NPDomination2"/>
+    <CActorSound id="NPDominationSound2" parent="SoundOneShot">
+        <On Terms="Abil.NPDomination2.SourceCastStart" Send="Create"/>
+        <Host Subject="NPDominationModel"/>
+        <Sound value="Infestor_AttackLaunch_NP"/>
+    </CActorSound>
+    <CActorModel id="NPDominationTentacle2">
+        <Inherits index="CloakEffect" value="1"/>
+        <On Terms="Effect.NPDominationLM.Start; At Caster" Send="Create"/>
+        <On Terms="ActorCreation" Send="AnimBracketStart BSD Attack Stand Death"/>
+        <On Terms="ActorCreation" Send="RefSet ::scope.Tentacle ::Self"/>
+        <On Terms="ActorCreation" Send="TimerSet 2.000000 TentacleFail"/>
+        <On Terms="ActorCreation" Send="SetOpacity"/>
+        <On Terms="ActorCreation" Send="SetOpacity 1.000000 0.500000"/>
+        <On Terms="Behavior.NPAlreadyDominating.On" Send="Create SiphonTentacleImpactHoldingSite"/>
+        <On Terms="Behavior.NPAlreadyDominating.On" Send="RefSetFromRequest TentacleAttack SiphonTentacleImpactHoldingSite"/>
+        <On Terms="Behavior.NPAlreadyDominating.On" Send="TimerKill TentacleFail"/>
+        <On Terms="Behavior.NPAlreadyDominating.Off" Send="AnimBracketStop BSD"/>
+        <On Terms="TimerExpired; TimerName TentacleFail" Send="AnimBracketStop BSD"/>
+        <On Terms="AnimBracketState.*.AfterClosing; AnimName BSD" Send="Destroy"/>
+        <Host Subject="_Selectable"/>
+        <HostSiteOps Ops="SOpAttachWeapon01Soft"/>
+        <Model value="NeuralParasiteTentacle2"/>
+        <HostedAttaches Name="TentacleAttack">
+            <AttachQuery Methods="Weapon"/>
+        </HostedAttaches>
+    </CActorModel>
+    <!--                                                                                         -->
+    <!-- Primal Zerg Melee ............................................................................. -->
+    <!--                                                                                         -->
+    <CActorUnit id="PrimalZergling" unitName="Alphaling">
+        <On index="0" Terms="UnitBirth.Alphaling" Send="Create SoundEmitter Alphaling_Ambience"/>
+        <On index="1" Terms="UnitBirth.Alphaling"/>
+        <On index="2" Terms="UnitRevive.Alphaling"/>
+        <On index="3" Terms="UnitRevive.Alphaling"/>
+        <On index="4" Terms="UnitConstruction.Alphaling.Start"/>
+        <On index="5" Terms="UnitConstruction.Alphaling.Finish"/>
+        <EventDataFootprint index="0" Model="AlphalingFootprint"/>
+        <DeathArray index="Normal" VoiceLink="AlphalingDeathVoice"/>
+        <GroupSoundArray index="What" value="Alphaling_GroupWhat"/>
+        <GroupSoundArray index="Yes" value="Alphaling_GroupYes"/>
+        <GroupSoundArray index="Attack" value="Alphaling_GroupAttack"/>
+        <GroupSoundArray index="Board" value="Alphaling_GroupBoard"/>
+        <SoundArray index="Birth" value="Alphaling_Birth"/>
+        <SoundArray index="Help" value="Alphaling_Help"/>
+        <SoundArray index="Pissed" value="Alphaling_Pissed"/>
+        <SoundArray index="Movement" value="Alphaling_Movement"/>
+        <SoundArray index="Turning" value="Alphaling_Turning"/>
+        <SoundArray index="Board" value="Alphaling_Board"/>
+        <SoundArray index="Click" value="Alphaling_Click"/>
+        <SoundArray index="ClickError" value="Alphaling_ClickError"/>
+        <SoundArray index="Highlight" value="Alphaling_Highlight"/>
+    </CActorUnit>
+    <CActorUnit id="PrimalZergling2" parent="GenericUnitStandard" unitName="PrimalZergling">
+        <Aliases value="_UnitSmall"/>
+        <Macros value="ZergBurrowStandardAnimMacro"/>
+        <Macros value="ZergMediumBurrowEffects"/>
+        <Macros value="UnloadDropAnim"/>
+        <Macros value="TerrainSquibAnimations"/>
+        <On Terms="UnitHeightUpdate.*.Land" Send="Create Zergling_Land"/>
+        <On Terms="AbilMorph.*.Start; AbilKey BurrowDown" Send="Create LargeBurrowDownEffects"/>
+        <On Terms="AbilMorph.*.Start; AbilKey BurrowDown" Send="Create BurrowDownLarge"/>
+        <On Terms="AbilMorph.*.Cancel; MorphFrom PrimalZergling; MorphTo PrimalZerglingBurrowed" Send="AnimClear Burrow"/>
+        <On Terms="AbilMorph.*.Finish; MorphTo PrimalZergling; MorphFrom PrimalZerglingBurrowed" Send="AnimBracketStop Burrow"/>
+        <On Terms="AbilMorph.*.Finish; MorphTo PrimalZergling; MorphFrom PrimalZerglingBurrowed" Send="AnimClear Burrow"/>
+        <On Terms="UnitBirth.PrimalZerglingBurrowed" Send="Create"/>
+        <On Terms="UnitBirth.PrimalZerglingBurrowed" Send="AnimBracketStart Burrow Burrow IGNORE Unburrow ClosingFull,OpeningPlayForever,Instant"/>
+        <DeathArray index="Normal" ModelLink="PrimalZerglingDeath" SoundLink="Roach_Explode"/>
+        <DeathArray index="Disintegrate" ModelLink="PrimalZerglingDeath" SoundLink="Uni_DeathFXAcid"/>
+        <DeathArray index="Fire" ModelLink="PrimalZerglingDeath" SoundLink="Uni_DeathFXFire"/>
+        <PortraitModel value="PrimalZerg01Portrait"/>
+        <TerrainSquibs>
+            <MovementDistance value="0.150000,0.150000"/>
+            <IdlePeriod value="0.100000,0.250000"/>
+            <RangeUp value="0.800000"/>
+            <RangeDown value="0.400000"/>
+            <AttachQuery Methods="AMFilterCenter"/>
+            <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleMedium15"/>
+        </TerrainSquibs>
+        <WalkAnimMoveSpeed value="5"/>
+        <BarOffset value="55"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Zerg-PrimalZergMelee.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-unit-Zerg-PrimalZergling.dds"/>
+        <HighlightTooltip value="Unit/Name/PrimalZergling2"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-zerg-groundcarapace-level0.dds"/>
+        <ShieldArmorIcon value="Assets\Textures\btn-upgrade-zerg-swarmfrenzy.dds"/>
+        <StatusColors index="Shields">
+            <ColorArray index="0" value="255,0,128,0"/>
+        </StatusColors>
+        <UnitIcon value="Assets\Textures\btn-unit-Zerg-PrimalZergling.dds"/>
+        <VitalColors index="Shields">
+            <ColorArray value="255,0,128,0"/>
+        </VitalColors>
+        <VitalNames index="Shields" value="Vital/ZergShields"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Zerg-PrimalZergMelee.dds"/>
+        </Wireframe>
+        <WireframeShieldColor value="255,0,128,0"/>
+    </CActorUnit>
+    <CActorAction id="PrimalZerglingAttack2" parent="GenericAttack" effectAttack="PrimalZergling2">
+        <LaunchModel value="GenericAttackLaunchModel2"/>
+        <LaunchSound value="GenericAttackLaunchSound2"/>
+        <ContainerModel value="GenericAttackLaunchModel2"/>
+        <ContainerSound value="GenericAttackLaunchSound2"/>
+        <ImpactAttachQuery Methods="AMFilterTargetVolumes"/>
+        <ImpactMap index="None" Sound="PrimalZergling_AttackImpact2"/>
+        <ImpactModel value="GenericAttackImpactModel2"/>
+        <ImpactSound value="GenericAttackImpactSound2"/>
+        <DamageModel value="GenericAttackDamageModel2"/>
+        <DamageSound value="GenericAttackDamageSound2"/>
+        <ShieldFlashType value="Header"/>
+    </CActorAction>
+    <CActorSound id="PrimalZerglingAttackLaunch2" parent="SoundOneShot">
+        <On Terms="WeaponStart.PrimalMaw.AttackStart" Send="Create"/>
+        <Sound value="PrimalZergling_AttackLaunch2"/>
+    </CActorSound>
+    <CActorSplat id="AlphalingBurrowed" parent="BurrowedSplat" unitName="Alphaling2"/>
+</Catalog>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CEffectDamage id="AcidMawDamage">
+        <EditorCategories value="Race:Zerg"/>
+        <AttributeBonus index="Biological" value="2"/>
+        <ArmorReduction value="1"/>
+        <Amount value="3"/>
+    </CEffectDamage>
+    <CEffectApplyBehavior id="AcidMawsUpgradeEffect">
+        <EditorCategories value="Race:Zerg"/>
+        <Behavior value="AcidMawsUpgradeBehavior"/>
+    </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="BrainExpansion">
+        <EditorCategories value="Race:Zerg"/>
+    </CEffectApplyBehavior>
+    <CEffectCreateUnit id="BroodmotherSpawnDrones">
+        <EditorCategories value="Race:Zerg"/>
+        <WhichLocation Value="CasterUnit"/>
+        <SpawnUnit value="Drone"/>
+        <SpawnCount value="3"/>
+    </CEffectCreateUnit>
+    <CEffectCreateUnit id="BroodmotherSpawnHydralisks">
+        <EditorCategories value="Race:Zerg"/>
+        <SpawnUnit value="Hydralisk"/>
+    </CEffectCreateUnit>
+    <CEffectCreateUnit id="BroodmotherSpawnZerglings">
+        <EditorCategories value="Race:Zerg"/>
+        <WhichLocation Value="CasterUnit"/>
+        <SpawnUnit value="Zergling"/>
+        <SpawnCount value="2"/>
+    </CEffectCreateUnit>
+    <CEffectDamage id="BruteTyrannyDamage">
+        <ValidatorArray value="IsZergling2"/>
+        <EditorCategories value="Race:Zerg"/>
+        <ImpactLocation Value="TargetUnit"/>
+        <Amount value="5"/>
+    </CEffectDamage>
+    <CEffectApplyBehavior id="BruteTyrannyEffectL">
+        <ValidatorArray index="0" value="IsZergling"/>
+        <EditorCategories value="Race:Zerg"/>
+        <Behavior value="BruteTyrranyLBuff"/>
+    </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="BruteTyrannyEffectG">
+        <ValidatorArray index="0" removed="1"/>
+        <EditorCategories value="Race:Zerg"/>
+        <WhichUnit Value="Caster"/>
+        <Behavior value="BruteTyrannyGBuff"/>
+    </CEffectApplyBehavior>
+    <CEffectSet id="BruteTyrannySet">
+        <EditorCategories value="Race:Zerg"/>
+        <EffectArray value="BruteTyrannyEffectG"/>
+        <EffectArray value="BruteTyrannyDamage"/>
+        <EffectArray value="BruteTyrannyEffectL"/>
+    </CEffectSet>
+    <CEffectEnumArea id="FindZerglings">
+        <EditorCategories value=""/>
+        <LaunchLocation Value="CasterUnit"/>
+        <ImpactLocation Value="CasterUnit"/>
+        <SearchFilters value="-;Self"/>
+        <AreaArray Radius="3" Effect="LesserlingBuff"/>
+    </CEffectEnumArea>
+    <CEffectEnumArea id="CountLessers">
+        <EditorCategories value="Race:Zerg"/>
+        <LaunchLocation Value="CasterUnit"/>
+        <ImpactLocation Value="CasterUnit"/>
+        <SearchFilters value="-;Self,Neutral,Enemy"/>
+        <AreaArray Radius="5" Effect="LordlingBuff"/>
+    </CEffectEnumArea>
+    <CEffectApplyBehavior id="LesserlingBuff">
+        <EditorCategories value="Race:Zerg"/>
+        <Behavior value="LesserlingBuffBehavior"/>
+    </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="LordlingBuff">
+        <ValidatorArray index="0" value="IsZergling"/>
+        <EditorCategories value="Race:Zerg"/>
+        <WhichUnit Value="Caster"/>
+        <Behavior value="LordlingBuffBehavior"/>
+    </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="Overlady">
+        <EditorCategories value="Race:Zerg"/>
+    </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="PrimalMawUpgrade">
+        <EditorCategories value="Race:Zerg"/>
+        <WhichUnit Value="Caster"/>
+        <Behavior value="PrimalMawUpgradeBehavior"/>
+    </CEffectApplyBehavior>
+    <CEffectDamage id="PrimalMawDamage">
+        <EditorCategories value="Race:Zerg"/>
+        <AttributeBonus index="Armored" value="5"/>
+        <ArmorReduction value="1"/>
+        <Amount value="7"/>
+    </CEffectDamage>
+    <CEffectDamage id="PrimalZergling2" parent="DU_WEAP">
+        <EditorCategories value="Race:Zerg"/>
+        <Amount value="5"/>
+    </CEffectDamage>
+    <CEffectCreatePersistent id="AcidMawPersistent">
+        <EditorCategories value="Race:Zerg"/>
+        <WhichLocation Value="TargetUnit"/>
+        <TimeScaleSource Value="Caster"/>
+        <Flags index="Channeled" value="1"/>
+        <PeriodCount value="2"/>
+        <PeriodicEffectArray value="AcidMawDamage"/>
+        <PeriodicPeriodArray value="0"/>
+        <PeriodicPeriodArray value="0.28"/>
+    </CEffectCreatePersistent>
+    <CEffectModifyUnit id="ReplenishBroodmother">
+        <EditorCategories value="Race:Zerg"/>
+        <Cost Abil="BroodmotherSpawnHydralisk,Execute" ChargeCountUse="-5"/>
+        <Cost Abil="BroodmotherSpawnZerglings,Execute" ChargeCountUse="-5"/>
+    </CEffectModifyUnit>
+</Catalog>

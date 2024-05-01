@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CBehaviorBuff id="AcidMawsUpgradeBehavior">
+        <Alignment value="Positive"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <Modification Food="-0.5">
+            <AbilLinkDisableArray value="AcidMaw"/>
+            <AbilLinkDisableArray value="PrimalRegression"/>
+            <WeaponEnableArray value="AcidMaw"/>
+            <WeaponDisableArray value="Claws"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BrainExpansion">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units,Race:Zerg"/>
+        <Modification Food="1">
+            <VitalMaxAdditiveMultiplierArray index="Energy" value="0.5"/>
+            <AbilLinkDisableArray value="BrainExpansion"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorUnitTracker id="BroodMomTracker">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+    </CBehaviorUnitTracker>
+    <CBehaviorBuff id="BruteTyrannyGBuff">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <MaxStackCount value="11"/>
+        <Modification>
+            <AdditiveAttackSpeedFactor value="0.1"/>
+            <VitalMaxAdditiveMultiplierArray index="Life" value="0.1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BruteTyrranyLBuff">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <Modification AttackSpeedMultiplier="1.05">
+            <DamageDealtFraction index="Melee" value="0.05"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CountLessers">
+        <Alignment value="Positive"/>
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units,Race:Zerg"/>
+        <TimeScaleSource Value="Global"/>
+        <Period value="0.0625"/>
+        <PeriodicEffect value="CountLessers"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="LesserlingBuffBehavior">
+        <Alignment value="Positive"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <BuffFlags index="Extend" value="1"/>
+        <TimeScaleSource Value="Global"/>
+        <Duration value="0.125"/>
+        <Modification AttackSpeedMultiplier="1.5">
+            <VitalMaxFractionArray index="Life" value="0.5"/>
+            <VitalRegenMultiplier index="Life" value="0.5"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="LordlingBuffBehavior">
+        <Alignment value="Positive"/>
+        <BehaviorCategories index="Aura" value="1"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <MaxStackCount value="10"/>
+        <MaxStackCountPerCaster value="4294967295"/>
+        <TimeScaleSource Value="Global"/>
+        <Duration value="1.125"/>
+        <Modification AttackSpeedMultiplier="1.1">
+            <VitalMaxAdditiveMultiplierArray index="Life" value="0.1"/>
+            <VitalRegenMultiplier index="Life" value="0.1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="Overlady">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <Modification Food="4">
+            <AbilLinkDisableArray value="Overlady"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="PrimalMawUpgradeBehavior">
+        <Alignment value="Positive"/>
+        <EditorCategories value="AbilityorEffectType:Units,Race:Zerg"/>
+        <Modification Food="-0.5">
+            <AbilLinkEnableArray value=""/>
+            <AbilLinkDisableArray value="PrimalRegression"/>
+            <AbilLinkDisableArray value="AcidMaw"/>
+            <WeaponEnableArray value="PrimalMaw"/>
+            <WeaponDisableArray value="Claws"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="FindZerlings">
+        <Alignment value="Positive"/>
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units,Race:Zerg"/>
+        <TimeScaleSource Value="Global"/>
+        <Period value="0.0625"/>
+        <PeriodicEffect value="FindZerglings"/>
+    </CBehaviorBuff>
+</Catalog>
